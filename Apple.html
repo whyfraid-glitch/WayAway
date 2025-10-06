@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>APPLE - Главная страница</title>
+    <link rel="stylesheet" href="Apple.css">
+</head>
+<body>
+    <!-- Шапка на всю ширину экрана -->
+    <header class="status-bar">
+        <img src="https://i.ibb.co/hFGqKQh8/5abb9679-dc1b-479b-847b-2d0dbcbf3cda.png" alt="Логотип Apple" class="status-logo" onclick="scrollToTop()">
+        <div class="status-title" onclick="scrollToTop()">APPLE</div>
+        <button class="menu-button" aria-label="Открыть меню">Меню</button>
+    </header>
+
+    <!-- Меню -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-panel" id="menuPanel">
+        <div class="menu-header">
+            <h3>Меню</h3>
+            <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">✕</button>
+        </div>
+        <div class="menu-links">
+            <a href="Apple.html" class="menu-link">ГЛАВНАЯ</a>
+            <a href="one-duo.html" class="menu-link">КАРЬЕРА</a>
+            <a href="two-duo.html" class="menu-link">ВИТРИНА</a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="main-content">
+        <!-- Блок с описанием -->
+        <section class="intro-section">
+            <div class="intro-container">
+                <img src="https://i.ibb.co/hFGqKQh8/5abb9679-dc1b-479b-847b-2d0dbcbf3cda.png" alt="Логотип Apple Ecosystem" class="main-logo">
+                <div class="ecosystem-title">APPLE ECOSYSTEM</div>
+                <p class="description">
+                    Apple — высококвалифицированная команда специалистов — приглашает к сотрудничеству всех желающих обрести достойную команду
+                </p>
+            </div>
+        </section>
+
+        <!-- Добро пожаловать и виджет -->
+        <section class="navigation-section">
+            <h2 class="section-title">ДОБРО ПОЖАЛОВАТЬ</h2>
+        </section>
+
+        <section class="widget-section" style="margin-top: -20px; padding-top: 0;">
+            <div class="widget-container">
+                <div class="promo-timer" id="promoTimer">
+                    <div class="promo-title" id="promoTitle">ДНЕВНАЯ АКЦИЯ 3+1</div>
+                    <div class="timer" id="promoTimerValue">10:45:32</div>
+                    <div class="promo-subtitle" id="promoSubtitle">ОНЛИ ЧЕРЕЗ ОПЕРАТОРА</div>
+                    <div class="promo-time" id="promoTime">10:00 - 22:00</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Поисковая строка -->
+        <section class="navigation-section">
+            <div class="main-search-container">
+                <div class="main-search-wrapper">
+                    <input type="text" class="main-search-input" placeholder="Найти раздел..." id="mainSearchInput" aria-label="Поиск по разделам">
+                    <button class="voice-search-button" onclick="startVoiceSearch()" aria-label="Голосовой поиск"></button>
+                    <div class="main-search-suggestions" id="mainSearchSuggestions"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Блок с контактным центром -->
+        <section class="navigation-section">
+            <div class="nav-blocks-container">
+                <!-- Оператор София -->
+                <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer" class="nav-block contact-block">
+                    <div class="telegram-corner"></div>
+                    <div class="contact-content">
+                        <div class="contact-title">ОПЕРАТОР</div>
+                        <div class="contact-status online">online</div>
+                        <div class="contact-status-text">Круглосуточно</div>
+                    </div>
+                </a>
+                
+                <!-- Бот авто-продаж -->
+                <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer" class="nav-block contact-block">
+                    <div class="telegram-corner"></div>
+                    <div class="contact-content">
+                        <div class="contact-title">БОТ-АВТО</div>
+                        <div class="contact-status online">online</div>
+                        <div class="contact-status-text">Бесконтактно</div>
+                    </div>
+                </a>
+                
+                <!-- Трудоустройство -->
+                <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer" class="nav-block contact-block">
+                    <div class="telegram-corner"></div>
+                    <div class="contact-content">
+                        <div class="contact-title">ПО РАБОТЕ</div>
+                        <div class="contact-status" id="techSupportStatus">online</div>
+                        <div class="contact-status-text" id="techSupportTime">с 10:00 до 22:00</div>
+                    </div>
+                </a>
+                
+                <!-- КОНТАКТ НА KRAKEN -->
+                <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer" class="nav-block contact-block">
+                    <div class="telegram-corner"></div>
+                    <div class="contact-content">
+                        <div class="contact-title">КОНТАКТЫ</div>
+                        <div class="contact-status online">online</div>
+                        <div class="contact-status-text">Мы на «Kraken»</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ФУТЕР -->
+    <footer id="footer" style="margin-top: 10px;">
+        <div class="footer-title">НАВИГАЦИЯ</div>
+        <div class="footer-links">
+            <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer">Telegram бот-автопродаж</a>
+            <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer">Оператор София</a>
+            <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer">Контакт трудоустройства</a>
+            <a href="https://t.me/voorw" target="_blank" rel="noopener noreferrer">Контакты Kraken</a>
+        </div>
+        <p>© 2025 Apple. Sky level of euphoria.</p>
+    </footer>
+    
+    <script>
+        // Поисковые данные
+        const searchData = [
+            { 
+                keywords: ['вакансии', 'работа', 'сотрудничество', 'трудоустройство', 'работать', 'вакансия', 'рабочие места', 'карьера'],
+                page: 'one-duo.html',
+                title: 'Карьера',
+                description: 'Работа в Apple'
+            },
+            { 
+                keywords: ['витрина', 'товары', 'продукты', 'купить', 'покупка', 'магазин', 'каталог', 'товар'],
+                page: 'two-duo.html',
+                title: 'Витрина',
+                description: 'Наши товары'
+            },
+            { 
+                keywords: ['главная', 'домой', 'начало', 'основная', 'начало сайта'],
+                page: 'Apple.html',
+                title: 'Главная',
+                description: 'Начало сайта'
+            }
+        ];
+        
+        // Элементы поиска
+        const mainSearchInput = document.getElementById('mainSearchInput');
+        const mainSearchSuggestions = document.getElementById('mainSearchSuggestions');
+        const voiceSearchButton = document.querySelector('.voice-search-button');
+
+        // Голосовой поиск
+        let recognition = null;
+
+        function startVoiceSearch() {
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                alert('Голосовой поиск не поддерживается в вашем браузере. Попробуйте Chrome или Edge.');
+                return;
+            }
+
+            try {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'ru-RU';
+
+                voiceSearchButton.classList.add('listening');
+                
+                recognition.start();
+
+                recognition.onstart = function() {
+                    mainSearchInput.placeholder = 'Говорите сейчас...';
+                };
+
+                recognition.onresult = function(event) {
+                    const transcript = event.results[0][0].transcript;
+                    mainSearchInput.value = transcript;
+                    performMainSearch();
+                };
+
+                recognition.onerror = function(event) {
+                    console.error('Ошибка распознавания:', event.error);
+                    if (event.error !== 'no-speech') {
+                        alert('Ошибка распознавания голоса: ' + event.error);
+                    }
+                };
+
+                recognition.onend = function() {
+                    voiceSearchButton.classList.remove('listening');
+                    mainSearchInput.placeholder = 'Найти раздел...';
+                };
+            } catch (error) {
+                console.error('Speech recognition failed:', error);
+                alert('Ошибка инициализации голосового поиска');
+            }
+        }
+
+        function stopVoiceSearch() {
+            if (recognition) {
+                recognition.stop();
+                voiceSearchButton.classList.remove('listening');
+                mainSearchInput.placeholder = 'Найти раздел...';
+            }
+        }
+
+        // Функция поиска
+        function performMainSearch() {
+            const query = mainSearchInput.value.trim().toLowerCase();
+            
+            if (!query) {
+                showMainSuggestions(searchData);
+                return;
+            }
+
+            const result = findSearchResult(query);
+            
+            if (result) {
+                window.location.href = result.page;
+            } else {
+                const suggestions = getSuggestions(query);
+                if (suggestions.length > 0) {
+                    showMainSuggestions(suggestions);
+                } else {
+                    showMainNoResults();
+                }
+            }
+        }
+
+        // Поиск результата
+        function findSearchResult(query) {
+            return searchData.find(item => 
+                item.keywords.some(keyword => query.includes(keyword))
+            );
+        }
+
+        // Получение подсказок
+        function getSuggestions(query) {
+            return searchData.filter(item =>
+                item.keywords.some(keyword => keyword.includes(query)) ||
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+        }
+
+        // Показать подсказки
+        function showMainSuggestions(suggestions) {
+            mainSearchSuggestions.innerHTML = '';
+            
+            suggestions.forEach(item => {
+                const suggestionElement = document.createElement('div');
+                suggestionElement.className = 'search-suggestion';
+                suggestionElement.innerHTML = `
+                    <div class="suggestion-title">${item.title}</div>
+                    <div class="suggestion-desc">${item.description}</div>
+                `;
+                
+                suggestionElement.addEventListener('click', () => {
+                    window.location.href = item.page;
+                });
+                
+                mainSearchSuggestions.appendChild(suggestionElement);
+            });
+            
+            mainSearchSuggestions.style.display = 'block';
+        }
+
+        // Показать "не найдено"
+        function showMainNoResults() {
+            mainSearchSuggestions.innerHTML = `
+                <div class="search-suggestion no-results">
+                    <div class="suggestion-title">Ничего не найдено</div>
+                    <div class="suggestion-desc">Попробуйте другие слова</div>
+                </div>
+            `;
+            mainSearchSuggestions.style.display = 'block';
+        }
+
+        // Скрыть подсказки
+        function hideMainSuggestions() {
+            mainSearchSuggestions.style.display = 'none';
+        }
+
+        // Обработчики событий для поиска
+        mainSearchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            
+            if (query.length === 0) {
+                hideMainSuggestions();
+                return;
+            }
+            
+            const suggestions = getSuggestions(query);
+            if (suggestions.length > 0) {
+                showMainSuggestions(suggestions);
+            } else {
+                showMainNoResults();
+            }
+        });
+
+        mainSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performMainSearch();
+            }
+        });
+
+        mainSearchInput.addEventListener('focus', function() {
+            const query = this.value.trim().toLowerCase();
+            if (query.length > 0) {
+                const suggestions = getSuggestions(query);
+                if (suggestions.length > 0) {
+                    showMainSuggestions(suggestions);
+                }
+            }
+        });
+
+        // Скрывать подсказки при клике вне поиска
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.main-search-container')) {
+                hideMainSuggestions();
+            }
+        });
+        
+        // Функция для прокрутки к началу страницы
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Функции для работы меню
+        const menuButton = document.querySelector('.menu-button');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const menuPanel = document.getElementById('menuPanel');
+        const closeMenu = document.getElementById('closeMenu');
+        const body = document.body;
+
+        menuButton.addEventListener('click', () => {
+            menuOverlay.style.display = 'block';
+            menuPanel.classList.add('open');
+            body.classList.add('menu-open');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            menuOverlay.style.display = 'none';
+            menuPanel.classList.remove('open');
+            body.classList.remove('menu-open');
+        });
+
+        menuOverlay.addEventListener('click', () => {
+            menuOverlay.style.display = 'none';
+            menuPanel.classList.remove('open');
+            body.classList.remove('menu-open');
+        });
+
+        // Закрытие меню при клике на ссылку
+        const menuLinks = document.querySelectorAll('.menu-links a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOverlay.style.display = 'none';
+                menuPanel.classList.remove('open');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Функции для свайпа
+        let startX = 0;
+        let startY = 0;
+        let currentX = 0;
+        let currentY = 0;
+        let isSwiping = false;
+        const swipeThreshold = 50;
+
+        // Свайп влево для открытия меню
+        document.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            isSwiping = true;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (!isSwiping) return;
+            
+            currentX = e.touches[0].clientX;
+            currentY = e.touches[0].clientY;
+            
+            const diffX = startX - currentX;
+            const diffY = startY - currentY;
+            
+            // Проверяем что это горизонтальный свайп (X > Y) и влево
+            if (Math.abs(diffX) > Math.abs(diffY) && diffX > swipeThreshold) {
+                // Свайп влево - открываем меню
+                menuOverlay.style.display = 'block';
+                menuPanel.classList.add('open');
+                body.classList.add('menu-open');
+                isSwiping = false;
+            }
+            
+            // Свайп вправо для закрытия меню (когда меню открыто)
+            if (menuPanel.classList.contains('open') && diffX < -swipeThreshold) {
+                menuOverlay.style.display = 'none';
+                menuPanel.classList.remove('open');
+                body.classList.remove('menu-open');
+                isSwiping = false;
+            }
+        });
+
+        document.addEventListener('touchend', () => {
+            isSwiping = false;
+        });
+
+        // Умный таймер акций
+        function updatePromoTimer() {
+            const now = new Date();
+            const hours = now.getHours();
+            const promoTimer = document.getElementById('promoTimer');
+            const promoTitle = document.getElementById('promoTitle');
+            const promoTimerValue = document.getElementById('promoTimerValue');
+            const promoSubtitle = document.getElementById('promoSubtitle');
+            const promoTime = document.getElementById('promoTime');
+
+            // Дневная акция: 10:00 - 22:00
+            // Ночная акция: 22:00 - 10:00
+            const isDayTime = hours >= 10 && hours < 22;
+            
+            if (isDayTime) {
+                // Дневная акция 3+1
+                promoTimer.className = 'promo-timer promo-day';
+                promoTitle.textContent = 'ДНЕВНАЯ АКЦИЯ 3+1';
+                promoTime.textContent = '10:00 - 22:00';
+                
+                // Таймер до конца дневной акции (22:00)
+                const endTime = new Date();
+                endTime.setHours(22, 0, 0, 0);
+                
+                if (now < endTime) {
+                    const timeLeft = endTime - now;
+                    const hoursLeft = Math.floor(timeLeft / (1000 * 60 * 60));
+                    const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    
+                    promoTimerValue.textContent = 
+                        `${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
+                    promoSubtitle.textContent = 'ОНЛИ ЧЕРЕЗ ОПЕРАТОРА';
+                }
+            } else {
+                // Ночная акция 2+1
+                promoTimer.className = 'promo-timer promo-night';
+                promoTitle.textContent = 'НОЧНАЯ АКЦИЯ 2+1';
+                
+                // Определяем время для ночной акции
+                let endTime;
+                if (hours < 10) {
+                    // Ночь до 10:00 утра
+                    endTime = new Date();
+                    endTime.setHours(10, 0, 0, 0);
+                    promoTime.textContent = '22:00 - 10:00';
+                } else {
+                    // Вечер после 22:00
+                    endTime = new Date();
+                    endTime.setDate(endTime.getDate() + 1);
+                    endTime.setHours(10, 0, 0, 0);
+                    promoTime.textContent = '22:00 - 10:00';
+                }
+                
+                const timeLeft = endTime - now;
+                const hoursLeft = Math.floor(timeLeft / (1000 * 60 * 60));
+                const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                promoTimerValue.textContent = 
+                    `${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
+                promoSubtitle.textContent = 'ОНЛИ ЧЕРЕЗ ОПЕРАТОРА';
+            }
+        }
+
+        // Запускаем таймер при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePromoTimer();
+            setInterval(updatePromoTimer, 1000);
+            
+            // Показываем все подсказки при первом фокусе на пустое поле
+            mainSearchInput.addEventListener('focus', function() {
+                if (this.value.trim() === '') {
+                    showMainSuggestions(searchData);
+                }
+            });
+        });
+        
+        // Функция для обновления статуса трудоустройства
+        function updateTechSupportStatus() {
+            const now = new Date();
+            const hours = now.getHours();
+            const techSupportStatus = document.getElementById('techSupportStatus');
+            const techSupportTime = document.getElementById('techSupportTime');
+            
+            if (hours >= 10 && hours < 22) {
+                // Online с 10:00 до 22:00
+                techSupportStatus.textContent = 'online';
+                techSupportStatus.className = 'contact-status online';
+                techSupportTime.textContent = 'с 10:00 до 22:00';
+            } else {
+                // Offline с 22:00 до 10:00
+                techSupportStatus.textContent = 'offline';
+                techSupportStatus.className = 'contact-status offline';
+                techSupportTime.textContent = 'с 10:00 до 22:00';
+            }
+        }
+
+        // Обновляем статус трудоустройства при загрузке и каждую минуту
+        updateTechSupportStatus();
+        setInterval(updateTechSupportStatus, 60000);
+    </script>
+</body>
+</html>
